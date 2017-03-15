@@ -24,7 +24,7 @@ This week's chart buster is: '24K Magic.'
 var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K Magic"];
 
 for (var i = 0; i<topFive.length; i++){
-  console.log("This week's chart buster is: " + topFive[i]);
+  console.log("This week's chart buster is: " + "'" + topFive[i] + "'");
 }
 
 /* 3) Dead Presidents
@@ -48,7 +48,7 @@ This function will iterate through the person parameter and console.log the foll
 */
 var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 for (var i=0; i<presidents.length; i++){
-  console.log(presidents[i]);
+  console.log("The value at " + i + " is " + presidents[i]);
 }
 console.log(presidents.length);
 
@@ -58,17 +58,17 @@ function leaders(person){
     console.log("President " + person[i] + " was a great leader");
   }
 }
-console.log(leaders(presidents));
+leaders(presidents);
 
 /* 4) Line Number
 Declare a variable named `stringOfNumbers` and assign its value to an empty string. 
 
 Write a for-loop that concatenates a Number value into that string on each iteration, starting at `10` and continuing up to and including `20`. Console.log your result. It should read "1011121314151617181920"*/
 
-var stringOfNumbers = " ";
-for (i=10; i<21; i++){
+/**var stringOfNumbers;
+for (i=10; i<20; i++){
   console.log(stringOfNumbers[i]);
-}
+}**/
 
 
 /* 5) Even Stevens
