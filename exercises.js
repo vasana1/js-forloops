@@ -46,13 +46,15 @@ This function will iterate through the person parameter and console.log the foll
 
 "President person was a great leader."
 */
+
+//#3
 var presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe"];
 for (var i=0; i<presidents.length; i++){
   console.log("The value at " + i + " is " + presidents[i]);
 }
 console.log(presidents.length);
 
-
+//#3A
 function leaders(person){
   for (var i=0; i<person.length; i++){
     console.log("President " + person[i] + " was a great leader");
@@ -95,7 +97,7 @@ Console.log your results.
 var oddSum = 0;
 for (var i=0; i<100; i++){
   if(i%2 ===1){
-    oddSum+=i;
+    oddSum+=i;  //same as oddSum = oddSum + i;
   }
 }
 console.log(oddSum);
@@ -163,7 +165,16 @@ Write a function named `copyArray` which takes two arguments: `originArray` and 
 
 Inside of this function write a for-loop that will iterate through the contents of the `originArray` and pushes each element of that array into `destinationArray`. Console.log your result.
 */
+var valuesArray = [99, 66, 829, 1941, 8, 76];
+var copyValuesArray = [];
 
+function copyArray(originArray, destinationArray){
+  for (var i=0; i<originArray.length; i++){
+    destinationArray.push(originArray[i]);
+  }return destinationArray;
+}
+console.log(copyArray(valuesArray, copyValuesArray));
+console.log(copyValuesArray);
 
 
 /*Final Boss*/
@@ -174,6 +185,20 @@ Write a function that will iterate through the string value and return the longe
 */
 
 
+var topQuote = "You had me at hello";
+
+function longestWord(str){
+  var strToArray = str.split(" ");
+  var currentWord = "";
+
+  for (var i=0; i<strToArray.length; i++){
+    if(strToArray[i].length > currentWord.length){
+      currentWord = strToArray[i];
+    }
+  }
+  return currentWord;
+}
+console.log(longestWord(topQuote));
 
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
